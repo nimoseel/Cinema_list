@@ -23,7 +23,7 @@
   font-family: 'Roboto';
 }
 
-.menu-bar {
+.nav-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,17 +35,17 @@
   color: #828282;
 }
 
-.menu-bar .li-menu {
+.nav-bar .li-nav {
   font-family: 'Roboto';
   display: inline;
 }
 
-.menu-bar .li-menu:first-child {
+.nav-bar .li-nav:first-child {
   color: #000000;
   font-weight: 900;
 }
 
-.menu-bar::after {
+.nav-bar::after {
   content: '';
   position: absolute;
   width: 650px;
@@ -135,8 +135,7 @@
 .btn-group {
   background-color: #F2F2F2;
   border-top: 1px solid #BDBDBD;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .btn-group a {
@@ -232,6 +231,7 @@
 .footer .cont-info::before {
   content: '';
   position: absolute;
+  display: inline-block;
   width: 100%;
   height: 1px;
   margin: -40px 0;
