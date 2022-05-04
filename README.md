@@ -1,2 +1,2 @@
 # Jungle_cinema
-Sass를 활용
+https://nimoseel.github.io/Jungle_Cinema/
