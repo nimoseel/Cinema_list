@@ -137,6 +137,7 @@ body {
   background-size: 14px 14px;
   display: inline-block;
   margin-right: 4px;
+  vertical-align: -1px;
 }
 
 .info-item .tit-info {
@@ -186,7 +187,7 @@ body {
   background-image: url(./imgs/playbtn.png);
   background-size: 16px 16px;
   background-repeat: no-repeat;
-  vertical-align: middle;
+  vertical-align: -3.5px;
 }
 
 .footer {
