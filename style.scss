@@ -4,12 +4,12 @@ body{
 
 .cont-movie{
     width: fit-content;
+    box-sizing: border-box;
+    margin: 86px auto 135px;
     padding: 41px 28px 31px 29px;
     border: 2px solid #BDBDBD;
     border-radius: 10px;
     background-color: #F2F2F2;
-    box-sizing: border-box;
-    margin: 86px auto 135px;
 }
 
 .tit-movie{
@@ -27,7 +27,7 @@ body{
 
 .nav-bar{
     display: flex;
-    position: relative;
+    // position: relative;
     justify-content: center;
     align-items: center;
     gap: 60px;
@@ -38,7 +38,7 @@ body{
 
     .li-nav {
         font-family: 'Roboto';
-        display: inline;
+        // display: inline;
         text-decoration: none;
         color: #828282;
     }
@@ -53,10 +53,10 @@ body{
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 23px;
     box-sizing: border-box;
+    padding: 26px 27px 30px;
     border: 2px solid #BDBDBD;
     border-radius: 10px;
     background-color: #FFFFFF;
-    padding: 26px 27px 30px;
 
     .movie-wrapper{
         padding:19px 20px 18px 20px;
@@ -72,17 +72,17 @@ body{
         .img-movie{
             width: 180px;
             height: 250px;
+            box-sizing: border-box;
             border-radius: 10px;
             border: 1px solid #BDBDBD;
-            box-sizing: border-box;
             box-shadow: 0px 4px 4px 0px #00000040;
         }
 
         .tit-item{
             display: block;
+            margin: 11px 0 12px;
             font-size: 16px;
             font-weight: 900;
-            margin: 11px 0 12px;
             line-height: 23.17px;
         }
     }
@@ -97,25 +97,7 @@ body{
         margin-bottom: 5px;
         display: inline-block;
         &:last-child{
-            margin: 0;
-        }
-    }
-
-    .rating{
-        float: right;
-        dt{
-            margin-right: 0;
-        }
-        dd::before{
-            content: '';
-            display: inline-block;
-            width: 14px;
-            height: 14px;
-            background: url(./imgs/star.png) no-repeat;
-            background-size: 14px 14px;
-            display: inline-block;
-            margin-right: 4px;
-            vertical-align: -1px;
+            margin-bottom: 0;
         }
     }
 
@@ -128,6 +110,23 @@ body{
     dd{
         display: inline;
     }
+
+    .rating{
+        float: right;
+        .tit-info{
+            margin-right: 0;
+        }
+        dd::before{
+            content: '';
+            display: inline-block;
+            margin-right: 4px;
+            width: 14px;
+            height: 14px;
+            background: url(./imgs/star.png) no-repeat;
+            background-size: 14px 14px;
+            vertical-align: -1px;
+        }
+    }
 }
 
 .btn-group{
@@ -136,6 +135,7 @@ body{
     border-radius: 0 0 10px 10px;
     line-height: 20.27px;
     font-size: 0;
+
     a{
         display: inline-block;
         box-sizing: border-box;
@@ -144,36 +144,34 @@ body{
         font-size: 14px;
         font-weight: 500;
     }
+
     .btn-buy{
         padding: 9px 28px 12px 27px;
         }
+
     .btn-teaser{
         padding: 9px 30px 12px 22px;
         border-left: 1px solid #BDBDBD;
-
         &::before{
             content: '';
             width: 16px;
             height: 16px;
-            margin: 2px 2px 0 0;
-            margin-right:2px;
+            margin-right: 2px;
             display: inline-block;
             background-image: url(./imgs/playbtn.png);
             background-size: 16px 16px;
             background-repeat: no-repeat;
-            vertical-align: -3.5px;
+            vertical-align: -4px;
         }
     }
-    
 }
 
 // footer
 .footer{
     height: 213px;
-    position: relative;
-    background-color: #F2F2F2;
     padding: 54px 0 38px;
     box-sizing: border-box;
+    background-color: #F2F2F2;
     &-inner{
         width: 1189px;
         margin: 0  auto;
@@ -203,9 +201,10 @@ body{
     }
 
     .cont-info{
+        display: flex;
+        justify-content: space-between;
         font-size: 14px;
         color: #4F4F4F;
-        position: relative;
 
         dt, dd{
             display: inline;
@@ -226,8 +225,44 @@ body{
             }
         }
         .copyright{
-            float: right;
-            margin-right: 0;
+            margin-left: 30px;
+            dt{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:576px){
+    body{
+        width: fit-content;
+    }
+
+    .cont-movie{
+        background-color: #FFFFFF;
+        border: none;
+    }
+
+    .nav-bar{
+        width: 450px;
+    }
+
+    .li-movie{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-inner{
+        width: auto;
+        padding: 0 30px;
+        .cont-info{
+            dt,dd{
+                line-height: 20px;
+            }
+            .line-up::before{
+                margin: 3px -7px 0;
+            }
         }
     }
 }
